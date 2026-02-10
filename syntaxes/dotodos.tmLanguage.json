@@ -1,0 +1,141 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "DoToDos",
+	"patterns": [
+		{
+			"include": "#task-done"
+		},
+		{
+			"include": "#task-todo"
+		},
+		{
+			"include": "#section"
+		},
+		{
+			"include": "#timestamp"
+		}
+	],
+	"repository": {
+		"section": {
+			"name": "markup.heading.dotodos",
+			"match": "^\\s*(?!☐|☑)(\\S.*?):(?:\\s*\\(\\d+\\/\\d+\\))?\\s*$",
+			"captures": {
+				"1": {
+					"name": "entity.name.section.dotodos"
+				}
+			}
+		},
+		"task-done": {
+			"name": "markup.strikethrough.dotodos",
+			"match": "^(\\s*)(☑)(\\s+)(\\S+)(\\s.*)?$",
+			"captures": {
+				"1": {
+					"name": "punctuation.whitespace.leading.dotodos"
+				},
+				"2": {
+					"name": "markup.checkbox.done.dotodos"
+				},
+				"3": {
+					"name": "punctuation.whitespace.dotodos"
+				},
+				"4": {
+					"name": "markup.strikethrough.task-done.dotodos",
+					"patterns": [
+						{
+							"include": "#task-prefixes"
+						},
+						{
+							"include": "#inline-code"
+						}
+					]
+				},
+				"5": {
+					"name": "markup.strikethrough.task-done.dotodos",
+					"patterns": [
+						{
+							"include": "#inline-code"
+						},
+						{
+							"include": "#timestamp"
+						}
+					]
+				}
+			}
+		},
+		"task-todo": {
+			"name": "markup.task.dotodos",
+			"match": "^(\\s*)(☐)(\\s+)(\\S+)(\\s.*)?$",
+			"captures": {
+				"1": {
+					"name": "punctuation.whitespace.leading.dotodos"
+				},
+				"2": {
+					"name": "markup.checkbox.todo.dotodos"
+				},
+				"3": {
+					"name": "punctuation.whitespace.dotodos"
+				},
+				"4": {
+					"name": "markup.task-text.dotodos",
+					"patterns": [
+						{
+							"include": "#task-prefixes"
+						},
+						{
+							"include": "#inline-code"
+						}
+					]
+				},
+				"5": {
+					"name": "markup.task-text.dotodos",
+					"patterns": [
+						{
+							"include": "#inline-code"
+						}
+					]
+				}
+			}
+		},
+		"task-prefixes": {
+			"patterns": [
+				{
+					"name": "keyword.control.bug.dotodos",
+					"match": "\\b(?i)(bug|error|issue|fix)\\b"
+				},
+				{
+					"name": "keyword.control.feat.dotodos",
+					"match": "\\b(?i)(feat|feature|new|add)\\b"
+				},
+				{
+					"name": "keyword.control.pending.dotodos",
+					"match": "\\b(?i)(pending|waiting|blocked|wip)\\b"
+				},
+				{
+					"name": "keyword.control.refactor.dotodos",
+					"match": "\\b(?i)(refactor|cleanup|improve|optimize)\\b"
+				},
+				{
+					"name": "keyword.control.test.dotodos",
+					"match": "\\b(?i)(test|testing|tests)\\b"
+				},
+				{
+					"name": "keyword.control.docs.dotodos",
+					"match": "\\b(?i)(docs|doc|documentation)\\b"
+				},
+				{
+					"name": "keyword.control.chore.dotodos",
+					"match": "\\b(?i)(chore|misc|other)\\b"
+				}
+			]
+		},
+		"inline-code": {
+			"name": "markup.inline.raw.string.dotodos",
+			"match": "`[^`]+`"
+		},
+		"timestamp": {
+			"name": "comment.line.timestamp.dotodos",
+			"match": "@\\d{4}-\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}"
+		}
+	},
+	"scopeName": "source.dotodos"
+}

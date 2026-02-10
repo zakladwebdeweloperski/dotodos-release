@@ -1,0 +1,234 @@
+{
+  "name": "dotodos",
+  "displayName": "DoToDos TODO",
+  "description": "Simple TODO extension without any complicated features",
+  "publisher": "ZakladWebdeweloperski",
+	"version": "1.0.9",
+  "icon": "img/icon.png",
+  "keywords": [
+    "todo",
+    "task",
+    "management",
+    "productivity",
+    "dotodos",
+    "hierarchical",
+    "checklist",
+    "notes"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zakladwebdeweloperski/dotodos-release.git"
+  },
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Other",
+    "Notebooks",
+    "Snippets"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+	"languages": [
+		{
+			"id": "dotodos",
+			"extensions": [".dotodos"],
+			"aliases": ["DoToDos", "dotodos", "TODO Files"],
+			"configuration": "./language-configuration.json"
+		}
+	],
+	"grammars": [
+		{
+			"language": "dotodos",
+			"scopeName": "source.dotodos",
+			"path": "./syntaxes/dotodos.tmLanguage.json"
+		}
+	],
+
+	"commands": [
+		{
+			"command": "dotodos.markAsTask",
+			"title": "DoToDos: Mark as Task",
+			"category": "DoToDos"
+	    },
+		{
+			"command": "dotodos.toggleTaskState",
+			"title": "DoToDos: Toggle Task State",
+			"category": "DoToDos"
+		},
+		{
+			"command": "dotodos.archiveDone",
+			"title": "DoToDos: Archive Done Tasks",
+			"category": "DoToDos"
+		},
+		{
+			"command": "dotodos.onEnter",
+			"title": "DoToDos: Auto-create Task on Enter",
+			"category": "DoToDos"
+		},
+		{
+			"command": "dotodos.indentTask",
+			"title": "DoToDos: Indent Task Line",
+			"category": "DoToDos"
+		},
+		{
+			"command": "dotodos.onBackspace",
+			"title": "DoToDos: Cancel Task Creation (Backspace)",
+			"category": "DoToDos"
+		}
+	],
+
+	"keybindings": [
+		{
+		  "command": "dotodos.markAsTask",
+		  "key": "ctrl+enter",
+		  "when": "editorTextFocus && resourceExtname == .dotodos"
+		},
+		{
+		  "command": "dotodos.toggleTaskState",
+		  "key": "ctrl+d",
+		  "when": "editorTextFocus && resourceExtname == .dotodos"
+		},
+		{
+		  "command": "dotodos.archiveDone",
+		  "key": "ctrl+shift+a",
+		  "when": "editorTextFocus && resourceExtname == .dotodos"
+		},
+		{
+		  "command": "dotodos.onEnter",
+		  "key": "enter",
+		  "when": "editorTextFocus && resourceExtname == .dotodos"
+		},
+		{
+		  "command": "dotodos.indentTask",
+		  "key": "tab",
+		  "when": "editorTextFocus && resourceExtname == .dotodos"
+		},
+		{
+		  "command": "dotodos.onBackspace",
+		  "key": "backspace",
+		  "when": "editorTextFocus && resourceExtname == .dotodos"
+		}
+	],
+
+	"menus": {
+		"commandPalette": [
+			{
+				"command": "dotodos.markAsTask",
+				"when": "editorLangId == dotodos"
+			},
+			{
+				"command": "dotodos.toggleTaskState",
+				"when": "editorLangId == dotodos"
+			},
+			{
+				"command": "dotodos.archiveDone",
+				"when": "editorLangId == dotodos"
+			}
+		],
+		"editor/context": [
+			{
+				"command": "dotodos.markAsTask",
+				"when": "editorLangId == dotodos",
+				"group": "dotodos@1"
+			},
+			{
+				"command": "dotodos.toggleTaskState",
+				"when": "editorLangId == dotodos",
+				"group": "dotodos@2"
+			},
+			{
+				"command": "dotodos.archiveDone",
+				"when": "editorLangId == dotodos",
+				"group": "dotodos@3"
+			}
+		]
+	},
+	"configurationDefaults": {
+		"editor.tokenColorCustomizations": {
+			"[*]": {
+				"textMateRules": [
+					{
+						"scope": "keyword.control.bug.dotodos",
+						"settings": {
+							"foreground": "#f44747",
+							"fontStyle": "bold"
+						}
+					},
+					{
+						"scope": "keyword.control.feat.dotodos",
+						"settings": {
+							"foreground": "#4ec9b0",
+							"fontStyle": "bold"
+						}
+					},
+					{
+						"scope": "keyword.control.pending.dotodos",
+						"settings": {
+							"foreground": "#c586c0",
+							"fontStyle": "bold"
+						}
+					},
+					{
+						"scope": "keyword.control.refactor.dotodos",
+						"settings": {
+							"foreground": "#4fc1ff",
+							"fontStyle": "bold"
+						}
+					},
+					{
+						"scope": "keyword.control.test.dotodos",
+						"settings": {
+							"foreground": "#dcdcaa",
+							"fontStyle": "bold"
+						}
+					},
+					{
+						"scope": "keyword.control.docs.dotodos",
+						"settings": {
+							"foreground": "#9cdcfe",
+							"fontStyle": "bold"
+						}
+					},
+					{
+						"scope": "keyword.control.chore.dotodos",
+						"settings": {
+							"foreground": "#808080",
+							"fontStyle": "bold"
+						}
+					},
+					{
+						"scope": "markup.inline.raw.string.dotodos",
+						"settings": {
+							"foreground": "#ce9178"
+						}
+					}
+				]
+			}
+		}
+	}
+},
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "lint": "eslint .",
+    "pretest": "npm run compile && npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.98.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "eslint": "^9.21.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "webpack": "^5.97.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
