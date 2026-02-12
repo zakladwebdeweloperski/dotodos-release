@@ -2,6 +2,13 @@
 
 All notable changes to the "dotodos" extension will be documented in this file.
 
+## [1.1.0] - 2026-02-12
+
+### Fixed
+- **Strikethrough Scope**: Checkbox character (☑) and completion timestamp are no longer struck through on done tasks — only the task text itself gets strikethrough
+- **Strikethrough on Whitespace**: Spaces between words in done tasks are no longer struck through (improved range calculation with start/end column bounds)
+- **Task Prefix Colon Coloring**: Task prefix keywords (Bug:, Feat:, etc.) now include the trailing colon in the colored highlight
+
 ## [1.0.9] - 2026-02-10
 
 ### Fixed

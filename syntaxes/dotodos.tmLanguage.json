@@ -26,8 +26,8 @@
 			}
 		},
 		"task-done": {
-			"name": "markup.strikethrough.dotodos",
-			"match": "^(\\s*)(☑)(\\s+)(\\S+)(\\s.*)?$",
+			"name": "markup.task-done.dotodos",
+			"match": "^(\\s*)(☑)(\\s+)(\\S+)(\\s.*)?",
 			"captures": {
 				"1": {
 					"name": "punctuation.whitespace.leading.dotodos"
@@ -39,7 +39,7 @@
 					"name": "punctuation.whitespace.dotodos"
 				},
 				"4": {
-					"name": "markup.strikethrough.task-done.dotodos",
+					"name": "markup.task-done.text.dotodos",
 					"patterns": [
 						{
 							"include": "#task-prefixes"
@@ -50,7 +50,7 @@
 					]
 				},
 				"5": {
-					"name": "markup.strikethrough.task-done.dotodos",
+					"name": "markup.task-done.text.dotodos",
 					"patterns": [
 						{
 							"include": "#inline-code"
@@ -100,31 +100,31 @@
 			"patterns": [
 				{
 					"name": "keyword.control.bug.dotodos",
-					"match": "\\b(?i)(bug|error|issue|fix)\\b"
+					"match": "\\b(?i)(?:bug|error|issue|fix)(?::|\\b)"
 				},
 				{
 					"name": "keyword.control.feat.dotodos",
-					"match": "\\b(?i)(feat|feature|new|add)\\b"
+					"match": "\\b(?i)(?:feat|feature|new|add)(?::|\\b)"
 				},
 				{
 					"name": "keyword.control.pending.dotodos",
-					"match": "\\b(?i)(pending|waiting|blocked|wip)\\b"
+					"match": "\\b(?i)(?:pending|waiting|blocked|wip)(?::|\\b)"
 				},
 				{
 					"name": "keyword.control.refactor.dotodos",
-					"match": "\\b(?i)(refactor|cleanup|improve|optimize)\\b"
+					"match": "\\b(?i)(?:refactor|cleanup|improve|optimize)(?::|\\b)"
 				},
 				{
 					"name": "keyword.control.test.dotodos",
-					"match": "\\b(?i)(test|testing|tests)\\b"
+					"match": "\\b(?i)(?:test|testing|tests)(?::|\\b)"
 				},
 				{
 					"name": "keyword.control.docs.dotodos",
-					"match": "\\b(?i)(docs|doc|documentation)\\b"
+					"match": "\\b(?i)(?:docs|doc|documentation)(?::|\\b)"
 				},
 				{
 					"name": "keyword.control.chore.dotodos",
-					"match": "\\b(?i)(chore|misc|other)\\b"
+					"match": "\\b(?i)(?:chore|misc|other)(?::|\\b)"
 				}
 			]
 		},

@@ -3,7 +3,7 @@
   "displayName": "DoToDos TODO",
   "description": "Simple TODO extension without any complicated features",
   "publisher": "ZakladWebdeweloperski",
-	"version": "1.0.9",
+	"version": "1.1.0",
   "icon": "img/icon.png",
   "keywords": [
     "todo",
@@ -77,6 +77,11 @@
 			"command": "dotodos.onBackspace",
 			"title": "DoToDos: Cancel Task Creation (Backspace)",
 			"category": "DoToDos"
+		},
+		{
+			"command": "dotodos.onEsc",
+			"title": "DoToDos: Cancel Task Creation (Esc)",
+			"category": "DoToDos"
 		}
 	],
 
@@ -110,6 +115,11 @@
 		  "command": "dotodos.onBackspace",
 		  "key": "backspace",
 		  "when": "editorTextFocus && resourceExtname == .dotodos"
+		},
+		{
+		  "command": "dotodos.onEsc",
+		  "key": "escape",
+		  "when": "editorTextFocus && resourceExtname == .dotodos && dotodos.newEmptyTask && !suggestWidgetVisible && !parameterHintsVisible && !editorHasMultipleSelections && !findWidgetVisible && !renameInputVisible && !inSnippetMode && !quickOpen.isOpen"
 		}
 	],
 
