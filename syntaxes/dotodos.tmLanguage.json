@@ -18,7 +18,7 @@
 	"repository": {
 		"section": {
 			"name": "markup.heading.dotodos",
-			"match": "^\\s*(?!☐|☑)(\\S.*?):(?:\\s*\\(\\d+\\/\\d+\\))?\\s*$",
+			"match": "^(?!☐|☑)(\\S.*?):(?:\\s*\\(\\d+\\/\\d+\\))?\\s*$",
 			"captures": {
 				"1": {
 					"name": "entity.name.section.dotodos"

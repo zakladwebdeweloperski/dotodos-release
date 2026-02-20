@@ -2,6 +2,11 @@
 
 All notable changes to the "dotodos" extension will be documented in this file.
 
+## [1.1.1] - 2026-02-20
+
+### Fixed
+- **Section Detection**: Lines with `:` that are indented (e.g., task content like `Note:` or `Steps:`) are no longer misidentified as sections — sections must start at column 0 with no indentation, fixing incorrect task counters in sections
+
 ## [1.1.0] - 2026-02-12
 
 ### Fixed

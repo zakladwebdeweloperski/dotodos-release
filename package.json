@@ -3,7 +3,7 @@
   "displayName": "DoToDos TODO",
   "description": "Simple TODO extension without any complicated features",
   "publisher": "ZakladWebdeweloperski",
-	"version": "1.1.0",
+	"version": "1.1.1",
   "icon": "img/icon.png",
   "keywords": [
     "todo",
@@ -229,7 +229,8 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "lint": "eslint .",
     "pretest": "npm run compile && npm run lint",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "vsce:publish": "vsce publish"
   },
   "devDependencies": {
     "@types/vscode": "^1.98.0",

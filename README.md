@@ -51,6 +51,21 @@ Users can archive tasks marked as done. This will remove them from the list and 
 
 ## Version History
 
+### 1.1.1
+
+- **Bug Fix**: Indented lines ending with `:` (e.g., task content like `Note:` or `Steps:`) are no longer misidentified as sections — sections must start at column 0, fixing incorrect task counters
+
+### 1.1.0
+
+- **Visual Fix**: Checkbox character (☑) and completion timestamp are no longer struck through on done tasks
+- **Visual Fix**: Spaces between words in done tasks are no longer struck through
+- **Visual Fix**: Task prefix keywords (Bug:, Feat:, etc.) now include the trailing colon in the colored highlight
+
+### 1.0.9
+
+- **Visual Fix**: Task prefix keywords now only highlight the first word of a task, not every occurrence
+- **Visual Fix**: Strikethrough on done tasks no longer bleeds through tabs and spaces
+
 ### 1.0.8
 
 - **Visual Fix**: Fixed strikethrough glitch on done tasks where the line appeared in a different color than text, especially noticeable with many archived tasks - replaced opacity-based styling with theme-aware color
