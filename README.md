@@ -29,6 +29,7 @@ Tasks are text lines with specific characters at the start of the line (first no
 
 - `☐` - for tasks to do
 - `☑` - for completed tasks
+- Checkbox markers are rendered in bold with a muted grey tone for better visibility
 
 When you mark a parent task as done (☑), all its subtasks (more indented tasks below it) will automatically be marked as done too. Similarly, when you mark a parent task as undone (☐), all its subtasks will be marked as undone.
 
@@ -50,6 +51,14 @@ Press `Tab` anywhere within a task line to indent the entire line, making it eas
 Users can archive tasks marked as done. This will remove them from the list and put them in an `Archived:` section below. If this section doesn't exist yet, archiving will create it.
 
 ## Version History
+
+### 1.1.3
+
+- **Visual Change**: Todo and done checkbox markers (`☐` and `☑`) are now both bold and use a muted grey tone for more consistent task styling
+
+### 1.1.2
+
+- **Visual Change**: Todo and done checkbox markers (`☐` and `☑`) are now rendered in bold for better visibility while scanning task lists
 
 ### 1.1.1
 

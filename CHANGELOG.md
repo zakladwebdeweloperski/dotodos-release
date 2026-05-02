@@ -2,6 +2,16 @@
 
 All notable changes to the "dotodos" extension will be documented in this file.
 
+## [1.1.3] - 2026-05-02
+
+### Changed
+- **Checkbox Styling**: Todo and done checkbox markers (`☐` and `☑`) are now both bold and use the muted done-task grey for better visibility and more consistent task styling
+
+## [1.1.2] - 2026-05-02
+
+### Changed
+- **Checkbox Styling**: Todo and done checkbox markers (`☐` and `☑`) are now rendered in bold for better visibility while scanning task lists
+
 ## [1.1.1] - 2026-02-20
 
 ### Fixed
