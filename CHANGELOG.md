@@ -2,6 +2,14 @@
 
 All notable changes to the "dotodos" extension will be documented in this file.
 
+## [1.2.0] - 2026-06-08
+
+### Added
+- **Subsections**: Indented section headings are now treated as subsections with the same styling and independent counters
+
+### Changed
+- **Section Counters**: Section counters now show percentage complete, like `(1/10) | 10%`, and parent sections include tasks from their subsections
+
 ## [1.1.3] - 2026-05-02
 
 ### Changed

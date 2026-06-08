@@ -17,7 +17,7 @@ Create a file with `.dotodos` extension.
 - `enter` - Creates new task automatically when pressed at the end of a task line.
 - `tab` - Indents task line(s). Works on single line or multiple selected lines containing tasks.
 
-You can divide tasks into blocks by adding titles like `Some Task Group:` - just add text with `:` at the end.
+You can divide tasks into blocks by adding titles like `Some Task Group:` - just add text with `:` at the end. Indent a title to create a subsection.
 
 ![DoToDos Screenshot](https://raw.githubusercontent.com/zakladwebdeweloperski/dotodos-release/main/img/tasks-screen-1.png)
 
@@ -36,7 +36,8 @@ When you mark a parent task as done (☑), all its subtasks (more indented tasks
 ### Sections
 
 A section divides tasks into smaller blocks. It could be a module name, a feature, or anything you like.
-Sections will have counters with done/all tasks.
+Sections will have counters with done/all tasks and percentage complete, like `(1/10) | 10%`.
+Indented subsections use the same style and have their own counters. Parent sections still count every task inside their subsections.
 
 ### Auto-Task Creation
 
@@ -51,6 +52,11 @@ Press `Tab` anywhere within a task line to indent the entire line, making it eas
 Users can archive tasks marked as done. This will remove them from the list and put them in an `Archived:` section below. If this section doesn't exist yet, archiving will create it.
 
 ## Version History
+
+### 1.2.0
+
+- **Subsections**: Indented section headings now behave as subsections with the same styling and their own counters
+- **Counters**: Section counters now include percentage complete, and parent sections count nested subsection tasks
 
 ### 1.1.3
 
