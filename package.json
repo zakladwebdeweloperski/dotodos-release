@@ -3,7 +3,7 @@
   "displayName": "DoToDos TODO",
   "description": "Simple TODO extension without any complicated features",
   "publisher": "ZakladWebdeweloperski",
-	"version": "1.2.0",
+	"version": "1.2.1",
   "icon": "img/icon.png",
   "keywords": [
     "todo",

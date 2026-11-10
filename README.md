@@ -51,7 +51,13 @@ Press `Tab` anywhere within a task line to indent the entire line, making it eas
 
 Users can archive tasks marked as done. This will remove them from the list and put them in an `Archived:` section below. If this section doesn't exist yet, archiving will create it.
 
+Archiving also removes a section or subsection heading if it has at least one task and every task in it is complete, including tasks in nested subsections.
+
 ## Version History
+
+### 1.2.1
+
+- Archiving removes the headings of fully completed sections and subsections.
 
 ### 1.2.0
 

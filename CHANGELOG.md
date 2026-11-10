@@ -2,6 +2,12 @@
 
 All notable changes to the "dotodos" extension will be documented in this file.
 
+## [1.2.1] - 2026-11-10
+
+### Changed
+
+- Archiving removes section and subsection headings once all tasks in them are complete, including tasks in nested subsections.
+
 ## [1.2.0] - 2026-06-08
 
 ### Added
